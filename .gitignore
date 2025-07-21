@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Streamlit cache
+.streamlit/
+
+# Local LLM models (large files)
+models/*.gguf
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables or config files (optional)
+.env
+*.env
+
+# FAISS index files 
+*.faiss
+*.index
+
+# Windows Python compiled files
+*.pyd
+
+# PyInstaller output
+dist/
+build/
+*.spec
