@@ -1,6 +1,6 @@
 # 📄 RAG PDF QA App with Local GGUF Model
 
-This project is a **Retrieval-Augmented Generation (RAG)** application that allows users to upload one or more PDF files, ask questions, and receive AI-generated answers using a **local LLM in `.gguf` format** (via `llama.cpp`). It runs entirely offline and uses fast local embeddings and a vector store.
+This project is a **Retrieval-Augmented Generation (RAG)** application that allows users to upload one or more PDF files, ask questions, and receive **AI-generated  context-aware answers** using a **local LLM in `.gguf` format** (via `llama.cpp`). Built with **Streamlit**, it provides an interactive web UI with complete privacy — **no external APIs or cloud LLMs used**.
 
 ## 🚀 Features
 
@@ -29,30 +29,44 @@ This project is a **Retrieval-Augmented Generation (RAG)** application that allo
 
 ## 📁 Folder Structure
 
+```
 rag_gguf_pdf_qa/
-├── app.py # Streamlit frontend
-├── rag_engine.py # RAG logic (embedding, retrieval, LLM)
-├── utils.py # PDF parsing and text chunking
+├── app.py                      # Streamlit frontend
+├── rag_engine.py               # RAG logic (embedding, retrieval, LLM)
+├── utils.py                    # PDF parsing and text chunking
 ├── models/
-│ └── your-model.gguf # Downloaded LLM (e.g., Mistral, Zephyr)
-└── requirements.txt # Python dependencies
+│ └── your-model.gguf           # Downloaded LLM (e.g., Mistral, Zephyr)
+├── .gitignore
+├── requirements.txt            # Python dependencies
+└── README.md
+```
 
 
 ## 🔧 Setup Instructions
 
 1. **Clone the repo**
 
-git clone https://github.com/your-username/rag-gguf-pdf-qa.git
-cd rag-gguf-pdf-qa
+```bash
+git clone https://github.com/rahul-58/RAG-App-with-Local-GGUF-Model.git
+cd RAG-App-with-Local-GGUF-Model
+```
 
 2. **Set up virtual environment**
+
+```bash
 python -m venv venv
 source venv/bin/activate  # or venv\\Scripts\\activate
+```
 
 3. **Install dependencies**
+
+```bash
 pip install -r requirements.txt
+```
 
 4. **Download a GGUF model**
+
+```
 Choose from TheBloke models on Hugging Face, e.g.:
 
 Mistral-7B-Instruct-v0.2.Q4_K_M.gguf
@@ -60,6 +74,22 @@ Mistral-7B-Instruct-v0.2.Q4_K_M.gguf
 zephyr-7B-beta.Q4_K_M.gguf
 
 Place it in the models/ folder.
+```
 
 5. **Run the app**
+
+```bash
 streamlit run app.py
+```
+
+Open [http://localhost:8501] in your browser.
+
+---
+
+## 📌 Example Use Case
+
+1. Upload your course notes or technical research papers as PDFs  
+2. Ask: *"What are the main contributions of this paper?"* or *"Explain the algorithm used in section 3."*  
+3. The app retrieves the most relevant chunks and generates an answer using the local model
+
+---
