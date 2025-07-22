@@ -67,7 +67,7 @@ pip install -r requirements.txt
 4. **Download a GGUF model**
 
 ```
-Choose from TheBloke models on Hugging Face, e.g.:
+Choose any model on Hugging Face, e.g.:
 
 Mistral-7B-Instruct-v0.2.Q4_K_M.gguf
 
